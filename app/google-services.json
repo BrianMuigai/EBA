@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1090712129498",
+    "firebase_url": "https://ebafirebaseproject.firebaseio.com",
+    "project_id": "ebafirebaseproject",
+    "storage_bucket": "ebafirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090712129498:android:b40705516b88a92b50fae3",
+        "android_client_info": {
+          "package_name": "com.eba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090712129498-unlorrphsr2u53f6o6rvck9depdfdpcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eba",
+            "certificate_hash": "abfed1ac026477666d716d4c7c94ea785ebd6f92"
+          }
+        },
+        {
+          "client_id": "1090712129498-keqb0cd9ksbc0bgvm53535nelc6hqnkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz4HKAIK3NLuEoQNqQbVFVM-tKXP3gAh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090712129498-keqb0cd9ksbc0bgvm53535nelc6hqnkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

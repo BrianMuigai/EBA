@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/app_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+      <TextView
+          android:id="@+id/date"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="1st September 2019"
+          android:textColor="#fff"
+          android:textStyle="italic"/>
+      <TextView
+          android:id="@+id/task_category"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Tasks"
+          android:textStyle="bold"
+          android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+          android:textScaleX="1.5"
+          android:textSize="32sp"
+          android:textColor="#fff"/>
+      <TextView
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#fff"
+          android:textSize="32sp"
+          android:text="FName"/>
+    </LinearLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <ListView
+      style="@style/widget"
+      android:layout_marginTop="10dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      android:id="@+id/object_list" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      app:layout_anchor="@+id/app_bar"
+      app:layout_anchorGravity="bottom|end"
+      app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
