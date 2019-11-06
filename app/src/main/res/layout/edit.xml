@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/AppTheme.AppBarOverlay">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+      <TextView
+          android:id="@+id/date"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="1st September 2019"
+          android:textColor="#fff"
+          android:textStyle="italic"/>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="New Task"
+          android:textStyle="bold"
+          android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+          android:textScaleX="1.5"
+          android:textSize="32sp"
+          android:textColor="#fff"/>
+      <TextView
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#fff"
+          android:textSize="32sp"
+          android:text="FName"/>
+    </LinearLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="5dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      android:layout_margin="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+          <EditText
+              android:id="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Task Name"
+              android:padding="5dp"
+              android:lines="1"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="5dp"
+              android:background="@drawable/edit_text_rounded_dark"
+              android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+          <EditText
+              android:id="@+id/description"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Description"
+              android:layout_marginBottom="5dp"
+              android:padding="5dp"
+              android:background="@drawable/edit_text_rounded_dark"
+              android:lines="5"
+              android:maxLines="5"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:paddingTop="8sp"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+          <CheckBox
+              android:id="@+id/alarm_checkbox"
+              android:layout_weight="1"
+              android:layout_width="0sp"
+              android:layout_height="wrap_content"
+              android:text="Alarm" />
+
+          <Spinner
+              android:id="@+id/occurence_spinner"
+              android:layout_weight="1"
+              android:layout_width="0sp"
+              android:layout_height="wrap_content"
+              android:spinnerMode="dropdown"
+              android:entries="@array/occurence" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:paddingTop="8sp"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+          <Button
+              android:id="@+id/date_button"
+              android:layout_weight="2"
+              android:layout_width="0sp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:onClick="onDateClick" />
+
+          <Button
+              android:id="@+id/time_button"
+              android:layout_weight="1"
+              android:layout_width="0sp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:onClick="onTimeClick" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <Button
+          style="@style/edit_button"
+          android:id="@+id/done"
+          android:text="Done"
+          android:onClick="onDoneClick" />
+
+      <Button
+          style="@style/edit_button"
+          android:id="@+id/cancel"
+          android:text="Cancel"
+          android:onClick="onCancelClick" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
